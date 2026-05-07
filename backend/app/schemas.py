@@ -31,19 +31,19 @@ class ProjectResponse(BaseModel):
 
 class TaskCreate(BaseModel):
     title: str
-    description : Optional[str]=None
-    status: TaskStatus.todo
+    description: Optional[str] = None
+    status: TaskStatus = TaskStatus.todo
     due_date: Optional[date] = None
     project_id: int
     assigned_to: Optional[int] = None
 
 class TaskUpdate(BaseModel):
-    title: Optional[str]=None
-    description: Optional[str]=None
-    status: Optional[TaskStatus]=None
+    title: Optional[str] = None
+    description: Optional[str] = None
+    status: Optional[TaskStatus] = None
     due_date: Optional[date] = None
     assigned_to: Optional[int] = None
-
+    
 class TaskResponse(BaseModel):
     id: int
     title: str
