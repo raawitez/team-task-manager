@@ -31,7 +31,7 @@ class ProjectResponse(BaseModel):
 
 class TaskCreate(BaseModel):
     title: str
-    description = Optional[str]=None
+    description : Optional[str]=None
     status: TaskStatus.todo
     due_date: Optional[date] = None
     project_id: int
@@ -39,7 +39,7 @@ class TaskCreate(BaseModel):
 
 class TaskUpdate(BaseModel):
     title: Optional[str]=None
-    description = Optional[str]=None
+    description: Optional[str]=None
     status: Optional[TaskStatus]=None
     due_date: Optional[date] = None
     assigned_to: Optional[int] = None
